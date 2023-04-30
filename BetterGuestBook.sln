@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{1FE0547B-491E-45EE-8D0D-77B30900AACD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FE0547B-491E-45EE-8D0D-77B30900AACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE0547B-491E-45EE-8D0D-77B30900AACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE0547B-491E-45EE-8D0D-77B30900AACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE0547B-491E-45EE-8D0D-77B30900AACD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCBCA7C2-239A-422A-94D0-8814E51C2A2F}
+	EndGlobalSection
+EndGlobal
