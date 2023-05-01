@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GuestBookLibrary.Models;
 
-// Capture information about each guest
+// Capture information about each guest (assumption is at least one guest and unkown maximum)
 // Info to capture: FirstName, LastName, MessageToHost
 // Once done, loop thorugh each guest and print their info. 
 
@@ -14,9 +15,36 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            List<GuestModel> guests = new List<GuestModel>();
+            string moreGuestsComing = "";
 
-         
+            do
+            {
+                GuestModel guest = new GuestModel();
+                Console.Write("What is your first name: ");
+                guest.FirstName = Console.ReadLine();
 
+                Console.Write("What is your last name: ");
+                guest.LastName = Console.ReadLine();
+
+                Console.Write("What message would you like to tell your host: ");
+                guest.MessageToHost = Console.ReadLine();
+
+                Console.Write("Are more guests coming (yes/no): ");
+                moreGuestsComing = Console.ReadLine();
+
+                guests.Add(guest);
+
+                Console.Clear();
+
+            } while (moreGuestsComing.ToLower() == "yes");
+
+            foreach (GuestModel guest in guests)
+            {
+                Console.WriteLine(guest.GuestInfo);
+            }
+
+            Console.ReadLine();
         }
     }
 }
