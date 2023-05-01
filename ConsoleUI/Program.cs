@@ -13,9 +13,28 @@ namespace ConsoleUI
 {
     class Program
     {
+        private static List<GuestModel> guests = new List<GuestModel>();
+
         static void Main(string[] args)
         {
-            List<GuestModel> guests = new List<GuestModel>();
+
+            GetGuestInformation();
+
+            PrintGuestInformation();
+
+            Console.ReadLine();
+        }
+
+        private static void PrintGuestInformation()
+        {
+            foreach (GuestModel guest in guests)
+            {
+                Console.WriteLine(guest.GuestInfo);
+            }
+        }
+
+        private static void GetGuestInformation()
+        {
             string moreGuestsComing = "";
 
             do
@@ -38,13 +57,6 @@ namespace ConsoleUI
                 Console.Clear();
 
             } while (moreGuestsComing.ToLower() == "yes");
-
-            foreach (GuestModel guest in guests)
-            {
-                Console.WriteLine(guest.GuestInfo);
-            }
-
-            Console.ReadLine();
-        }
+         }
     }
 }
