@@ -40,23 +40,26 @@ namespace ConsoleUI
             do
             {
                 GuestModel guest = new GuestModel();
-                Console.Write("What is your first name: ");
-                guest.FirstName = Console.ReadLine();
-
-                Console.Write("What is your last name: ");
-                guest.LastName = Console.ReadLine();
-
-                Console.Write("What message would you like to tell your host: ");
-                guest.MessageToHost = Console.ReadLine();
-
-                Console.Write("Are more guests coming (yes/no): ");
-                moreGuestsComing = Console.ReadLine();
+                
+                guest.FirstName = GetInfoFromConsole("What is your first name: ");
+                guest.LastName = GetInfoFromConsole("What is your last name: ");
+                guest.MessageToHost = GetInfoFromConsole("What message would you like to tell your host: ");
+                moreGuestsComing = GetInfoFromConsole("Are more guests coming (yes/no): ");
 
                 guests.Add(guest);
 
                 Console.Clear();
-
             } while (moreGuestsComing.ToLower() == "yes");
          }
+
+        private static string GetInfoFromConsole(string message)
+        {
+            string output = "";
+
+            Console.Write(message);
+            output = Console.ReadLine();
+
+            return output;
+        }
     }
 }
